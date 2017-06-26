@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script type="text/javascript" src="/webjars/jquery/3.1.0/jquery.min.js"></script>  
+    <script>
+        function ajaxpost(){
+            var list={
+                name:'123',type:'456'
+            };
+            $.ajax({
+                url:'http://localhost:8080/load1',
+                dataType:'json',
+                type:'post',
+                data:JSON.stringify(list),
+                contentType:"application/json",
+                success:function(data){
+                    alert(data)
+                },
+                error:function(){
+
+                    alert("errr");
+                }
+
+            })
+        }
+    </script>
+
+
+</head>
+<body>
+
+<input type="button" value="anniu" onclick="ajaxpost()" />
+</body>
+
+</html>
