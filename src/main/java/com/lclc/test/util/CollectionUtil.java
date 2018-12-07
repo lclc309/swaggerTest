@@ -32,4 +32,6 @@ public class CollectionUtil {
         list.clear();
         return newList;
     }
+
+
 }
